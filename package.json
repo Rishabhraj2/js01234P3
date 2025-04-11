@@ -1,0 +1,26 @@
+{
+  "name": "js01234p3",
+  "version": "1.0.0",
+  "description": "Library System",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rishabhraj2/js01234P3.git"
+  },
+  "author": "rishabh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rishabhraj2/js01234P3/issues"
+  },
+  "homepage": "https://github.com/Rishabhraj2/js01234P3#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
