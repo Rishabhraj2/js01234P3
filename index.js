@@ -7,15 +7,12 @@ const PORT=8081;
 
 app.use(express.json());
 
-
-
 app.get("/",(req,res)=>{
     res.status(200).json({
         message:"Server is up and runing :-)",
         data:"hey",
     });
 });
-
 
 /**
  * Route:/users
@@ -37,6 +34,7 @@ app.get("/users",(req,res)=>{
 //         message: "this route does not exits",
 //     });
 // });
+
 app.listen(PORT,()=>{
     console.log(`Server is runing at port ${PORT}`);
 });
