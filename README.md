@@ -75,6 +75,7 @@ GET:Get all issued books with their fine
 ## npm init
 ## npm i nodemon --save dev
 ## npm run dev
+## Router
 
 
 
@@ -92,8 +93,8 @@ each
 
 ...data        {
   "data":{
-    "name":"Rishabh",
-    "surname":"Raj"
+   ## "name":"Rishabh",
+   ## "surname":"Raj"
   }
 }
 
@@ -102,3 +103,15 @@ name :"rishabh"
 name:"devton"
 email:"user@gmail.com
 suscription:"primium"
+
+
+
+  const index=users.indexOf(user);
+  users.splice(index,1)
+
+
+
+  var class=["six","seven","eighr"];
+  indexof()
+  class.indexOf("seven")
+  1
