@@ -7,9 +7,9 @@
         "email":"user@gmail.com",
         "issuedBook":"1",
         "issueDate":"04/01/2022",
-        "returnDate":"05/01/2022",
-        "subscriptionType":"premium",
-        "subscriptionDate":"04/01/2022"
+        "returnDate":"05/09/2022",
+        "subscriptionType":"Premium",
+        "subscriptionDate":"04/11/2022"
     },
     {
         "id":"2",
@@ -19,7 +19,7 @@
         "issuedBook":"2",
         "issueDate":"04/01/2022",
         "returnDate":"05/01/2022",
-        "subscriptionType":"basic",
+        "subscriptionType":"Basic",
         "subscriptionDate":"04/01/2022"
     },
     {
@@ -30,7 +30,7 @@
         "issuedBook":"3",
         "issueDate":"01/07/2021",
         "returnDate":"01/10/2021",
-        "subscriptionType":"basic",
+        "subscriptionType":"Basic",
         "subscriptionDate":"01/01/2022"
     },
     {
@@ -38,7 +38,7 @@
         "name":"jane",
         "surename":"Doe",
         "email":"user@gmail.com",
-        "subscriptionType":"premium",
+        "subscriptionType":"Premium",
         "subscriptionDate":"04/01/2022"
     }
   ]
