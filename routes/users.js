@@ -88,7 +88,7 @@ router.get("/", (req,res)=>{
    * Parameter:None
    */
   
-  router.put("/user/:id",(req,res)=>{
+  router.put("/:id",(req,res)=>{
     const{id}=req.params;
     const{data}=req.body;
   
@@ -103,7 +103,7 @@ router.get("/", (req,res)=>{
       if(each.id===id){
         return{
           ...each,
-          ...data,
+          ...data
         };
       }
       return each;
