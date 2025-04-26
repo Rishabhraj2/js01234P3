@@ -1,16 +1,26 @@
 const express=require("express");
+const{getAllBooks}=require("../controllers/books-controller");
 const {books}=require("../data/books.json");
 const {user}=require("../data/users.json");
 const router=express.Router();
 
+// const BookModel= require('../modals/book-models');
+// const UserModel= require('../modals/users-models');
+
+const {UesrModel,BookModel}=require("../modals/index");
 
 /**
+ * 
    * Route:/books
    * Method:GET
    * Description:Geting all books
    * Access:public
    * Parameter:None
    */
+
+
+router.get("/", getAllBooks);
+
 
 router.get("/",(_req,res)=>{
     res.status(200)
@@ -28,7 +38,7 @@ router.get("/",(_req,res)=>{
 
 router.get("/:id",(req,res)=>{
     const {id}=req.params;
-    const book=books.find((each)=>each.id===id)
+    const book=books.find((each)=>each.id===id);
 
     if(!book){
         return res.status(404).json({
@@ -51,33 +61,35 @@ router.get("/:id",(req,res)=>{
    * Parameter:None
    */
 
-router.get("/issued/user",(req,res)=>{
-    const usersWithTheIssuedBooks = user.filter((each)=>{
-        if(each.issuedBooks) return each;
-    });
-    const issuedBooks=[];
+router.get("/issued/user",getAllIssuedBooks);
+    // (req,res)
+// =>{
+//     const usersWithTheIssuedBooks = users.filter((each)=>{
+//         if(each.issuedBooks) return each;
+//     });
+//     const issuedBooks=[];
 
-    usersWithTheIssuedBooks.forEach((each)=>{
-        const book=books.find((book)=> book.id===each.issuedBook);
+//     usersWithTheIssuedBooks.forEach((each)=>{
+//         const book=books.find((book)=> book.id===each.issuedBook);
 
-        book.issuedBy=each.name;
-        book.issuedDate=each.issuedDate;
-        book.returnDate=each.returnDate;
+//         book.issuedBy=each.name;
+//         book.issuedDate=each.issuedDate;
+//         book.returnDate=each.returnDate;
 
-        issuedBooks.push(book);
-    });
-    if(issuedBooks.length===0){
-        return res.status(404).json({
-            success:false,
-            message:"No Book Have Been Issued Yet.."
-        });
-    }
-    return res.status(200).json({
-        success:true,
-        message:"Users Wait The Issued Books...",
-        data:issuedBooks,
-    });
-});
+//         issuedBooks.push(book);
+//     });
+//     if(issuedBooks.length===0){
+//         return res.status(404).json({
+//             success:false,
+//             message:"No Book Have Been Issued Yet.."
+//         });
+//     }
+//     return res.status(200).json({
+//         success:true,
+//         message:"Users Wait The Issued Books...",
+//         data:issuedBooks,
+//     });
+// });
 
 /**
    * Route:/

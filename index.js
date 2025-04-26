@@ -1,10 +1,10 @@
 const express=require("express");
 const dotenv= require("dotenv");
 const DbConnection=require("./databaseConnection")
-// const {users}=require("./data/users.json");;
-// const {books} =require("./data/books.json");
+// const {user}=require("./data/users.json");;
+// const {book} =require("./data/books.json");
 
-const userRouter=require("./routes/users.js")
+const userRouter=require("./routes/users.js");
 const booksRouter=require("./routes/books");
 
 dotenv.config();

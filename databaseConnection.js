@@ -14,4 +14,3 @@ db.once("open",function(){
     console.log("DB Connected !!")
 })
 module.exports=DbConnection ;
-

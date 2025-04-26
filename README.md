@@ -115,3 +115,29 @@ suscription:"primium"
   indexof()
   class.indexOf("seven")
   1
+
+  mvc stand for -=cintrollers
+ >> m=modal
+ >> v =view(wrt to frontend (reactjs))
+ >> c=controllers(brain ir ligical part of a rute)
+     >> books.controllers.js
+     >>users.controllers.js
+
+Schema>>
+id:string
+name:string
+age:number
+Gender:char|| varchar(15)
+
+model>>
+id:112
+name:Devton
+
+
+Foreing Kry:
+>>  Referential Integrity
+
+Usre Table                      Books Table
+issuedBook:2(Primary Key)
+
+issuedBook:2(Foreing Key here)
